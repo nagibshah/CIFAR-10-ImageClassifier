@@ -6683,6 +6683,78 @@ node {
   }
 }
 node {
+  name: "Cross_Entropy/tags"
+  op: "Const"
+  attr {
+    key: "_output_shapes"
+    value {
+      list {
+        shape {
+        }
+      }
+    }
+  }
+  attr {
+    key: "dtype"
+    value {
+      type: DT_STRING
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_STRING
+        tensor_shape {
+        }
+        string_val: "Cross_Entropy"
+      }
+    }
+  }
+}
+node {
+  name: "Cross_Entropy"
+  op: "ScalarSummary"
+  input: "Cross_Entropy/tags"
+  input: "softmax_cross_entropy_loss/value"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "_output_shapes"
+    value {
+      list {
+        shape {
+        }
+      }
+    }
+  }
+}
+node {
+  name: "Merge/MergeSummary"
+  op: "MergeSummary"
+  input: "enqueue_input/queue/enqueue_input/random_shuffle_queuefraction_over_250_of_750_full"
+  input: "Cross_Entropy"
+  attr {
+    key: "N"
+    value {
+      i: 2
+    }
+  }
+  attr {
+    key: "_output_shapes"
+    value {
+      list {
+        shape {
+        }
+      }
+    }
+  }
+}
+node {
   name: "gradients/Shape"
   op: "Const"
   attr {
@@ -13351,13 +13423,14 @@ node {
   input: "^init_all_tables"
 }
 node {
-  name: "Merge/MergeSummary"
+  name: "Merge_1/MergeSummary"
   op: "MergeSummary"
   input: "enqueue_input/queue/enqueue_input/random_shuffle_queuefraction_over_250_of_750_full"
+  input: "Cross_Entropy"
   attr {
     key: "N"
     value {
-      i: 1
+      i: 2
     }
   }
   attr {
@@ -13425,7 +13498,7 @@ node {
         dtype: DT_STRING
         tensor_shape {
         }
-        string_val: "_temp_8832546a7c0845acb94212eedb6b051b/part"
+        string_val: "_temp_745d188641ff46db8ecb4b7687f78699/part"
       }
     }
   }
