@@ -1,19 +1,19 @@
 Model,Parameter,Value
-CNN,Accuracy,0.7999
+CNN,Accuracy,0.81
 BOVW + SVM Radial,Accuracy,0.4982
 BOVW + SVM Linear,Accuracy,0.4659
 Daisy + SVM Linear,Accuracy,0.575
 ResNet,Accuracy,0.7834
 RNN - GRU,Accuracy,0.44
 RNN - LSTM,Accuracy,0.45
-CNN,Precision,0.8
+CNN,Precision,0.81
 BOVW + SVM Radial,Precision,0.5
 BOVW + SVM Linear,Precision,0.45
 Daisy + SVM Linear,Precision,0.56
 ResNet,Precision,0.78
 RNN - GRU,Precision,0.64
 RNN - LSTM,Precision,0.68
-CNN,Recall,0.8
+CNN,Recall,0.81
 BOVW + SVM Radial,Recall,0.5
 BOVW + SVM Linear,Recall,0.46
 Daisy + SVM Linear,Recall,0.57
@@ -27,17 +27,17 @@ Daisy + SVM Linear,F1,0.57
 ResNet,F1,0.78
 RNN - GRU,F1,0.27
 RNN - LSTM,F1,0.33
-CNN,Time to Train(In Hrs),2.88
-BOVW + SVM Radial,Time to Train(In Hrs),0.4
-BOVW + SVM Linear,Time to Train(In Hrs),0.25
-Daisy + SVM Linear,Time to Train(In Hrs),1.31
-ResNet,Time to Train(In Hrs),1.57
+CNN,Time to Train(In Hrs),0.2
+BOVW + SVM Radial,Time to Train(In Hrs),0.3
+BOVW + SVM Linear,Time to Train(In Hrs),0.5
+Daisy + SVM Linear,Time to Train(In Hrs),0.8
+ResNet,Time to Train(In Hrs),0.4
 RNN - GRU,Time to Train(In Hrs),0.3
-RNN - LSTM,Time to Train(In Hrs),0.38
-CNN,Time to Predict (In Hrs),0.004167
-BOVW + SVM Radial,Time to Predict (In Hrs),0.060881
-BOVW + SVM Linear,Time to Predict (In Hrs),0.000003
-Daisy + SVM Linear,Time to Predict (In Hrs),0.006283
-ResNet,Time to Predict (In Hrs),0.007008
-RNN - GRU,Time to Predict (In Hrs),0.0175
-RNN - LSTM,Time to Predict (In Hrs),0.033889
+RNN - LSTM,Time to Train(In Hrs),0.3
+CNN,Time to Predict (In Hrs),0.6
+BOVW + SVM Radial,Time to Predict (In Hrs),0.2
+BOVW + SVM Linear,Time to Predict (In Hrs),0.8
+Daisy + SVM Linear,Time to Predict (In Hrs),0.7
+ResNet,Time to Predict (In Hrs),0.6
+RNN - GRU,Time to Predict (In Hrs),0.6
+RNN - LSTM,Time to Predict (In Hrs),0.6
